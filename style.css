@@ -1,0 +1,208 @@
+/*Rules*/
+@charset "UTF-8";
+
+:root {
+    /*Variables*/
+    --cor0: #FFFFFF;
+    --cor1: #AAFC5D;
+    --cor2: #A2F059;
+    --cor3: #8CCE4D;
+    --cor4: #90D64F;
+    --cor5: #4C702A;
+    --cor6: #000000;
+}
+
+* {
+    /*Box model stuff*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /*Box model stuff*/
+    background-color: var(--cor4);
+    /*Typography stuff*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    /*Box model stuff*/
+    min-height: 150px;
+    padding-top: 20px;
+    background-color: var(--cor4);
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+    /*Typography stuff*/
+    text-align: center;
+}
+
+header>h1 {
+    /*Box model stuff*/
+    margin-bottom: 30px;
+    margin-top: 10px;
+    /*Typography stuff*/
+    font-size: 3em;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.397);
+    color: white;
+}
+
+nav {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Box model stuff*/
+    padding-top: 20px;
+}
+
+nav>a {
+    /*Box model stuff*/
+    margin: 2px;
+    padding: 10px;
+    border-radius: 5px;
+    /*Typography stuff*/
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor1);
+    /*Manipulations stuff*/
+    transition-duration: 0.5s;
+}
+
+nav>a:hover {
+    /*Box model stuff*/
+    background-color: var(--cor6);
+    /*Typography stuff*/
+    color: var(--cor5);
+}
+
+main {
+    /*Box model stuff*/
+    max-width: 1000px;
+    min-width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--cor0);
+    /*Miscellaneous*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.507);
+}
+
+main p {
+    /*Box model stuff*/
+    margin: 15px 0px;
+    /*Typography stuff*/
+    font-size: 1em;
+    text-align: justify;
+    text-indent: 30px;
+    color: var(--cor6);
+    /*Miscellaneous*/
+    line-height: 2em;
+}
+
+main a {
+    /*Box model stuff*/
+    padding: 2px 6px;
+    background-color: var(--cor1);
+    /*Typography stuff*/
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor5);
+}
+
+main a:hover {
+    /*Typography stuff*/
+    text-decoration: underline;
+    color: var(--cor0);
+}
+
+section h2,
+h3 {
+    /*Box model stuff*/
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    /*Typography stuff*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: normal;
+    text-indent: 8px;
+    color: var(--cor5);
+}
+
+#servicos {
+    /*Box model stuff*/
+    margin-bottom: 15px;
+    padding: 2px;
+
+}
+
+.s1 {
+    /*Box model stuff*/
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+    /*Typography stuff*/
+    text-align: center;
+}
+
+.s1 h2 {
+    /*Box model stuff*/
+    margin-bottom: 20px;
+    /*Typography stuff*/
+    font-size: 36px;
+}
+
+.agendar {
+    /*Display stuff*/
+    display: inline-block;
+    /*Box model stuff*/
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--cor5);
+    /*Typography stuff*/
+    text-decoration: none;
+    color: var(--cor1);
+    /*Manipulations stuff*/
+    transition: background-color 0.3s ease-in-out 0.1s, opacity 0.5s linear 0.2s, transform 0.4s ease 0.3s;
+}
+
+.agendar:hover {
+    /*Box model stuff*/
+    background-color: var(--cor6);
+}
+
+.s2 {
+    /*Box model stuff*/
+    padding: 20px;
+    /*Typography stuff*/
+    text-align: center;
+}
+
+.service {
+    /*Box model stuff*/
+    margin-bottom: 40px;
+}
+
+.service img {
+    /*Box model stuff*/
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.507);
+}
+
+.service h3 {
+    /*Box model stuff*/
+    margin-top: 10px;
+    /*Typography stuff*/
+    font-size: 24px;
+}
+
+footer {
+    /*Box model stuff*/
+    padding: 5px;
+    background-color: var(--cor5);
+    /*Typography stuff*/
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+}
