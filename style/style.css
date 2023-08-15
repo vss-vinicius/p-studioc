@@ -1,6 +1,18 @@
 /*Rules*/
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'CreamCake';
+    src: url('../fonts/CreamCake.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Staytrue';
+    src: url('../fonts/StaytrueDemo-Italic.otf') format('opentype');
+    font-weight: normal;
+}
+
 :root {
     /*Variables*/
     --cor0: #FFFFFF;
@@ -8,8 +20,13 @@
     --cor2: #A2F059;
     --cor3: #8CCE4D;
     --cor4: #90D64F;
-    --cor5: #4C702A;
-    --cor6: #000000;
+    --cor5: #0FFB00;
+    --cor6: #4C702A;
+    --cor7: #000000;
+
+    --default-font: Arial, Helvetica, sans-serif;
+    --cream-font: 'CreamCake', sans-serif;
+    --stay-font: 'Staytrue', Cursive;
 }
 
 * {
@@ -20,9 +37,9 @@
 
 body {
     /*Box model stuff*/
-    background-color: var(--cor4);
+    background-image: linear-gradient(to bottom, var(--cor0), var(--cor5));
     /*Typography stuff*/
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font);
 }
 
 header {
@@ -30,20 +47,21 @@ header {
     min-height: 150px;
     padding-top: 20px;
     background-color: var(--cor4);
-    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+    background-image: linear-gradient(to bottom, #4b4949, #0c0c0c);
     /*Typography stuff*/
     text-align: center;
 }
 
 header>h1 {
     /*Box model stuff*/
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     margin-top: 10px;
     /*Typography stuff*/
-    font-size: 3em;
+    font-family: var(--stay-font);
+    font-size: 4em;
     font-weight: normal;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.397);
-    color: white;
+    color: var(--cor5);
 }
 
 nav {
@@ -52,7 +70,7 @@ nav {
     align-items: center;
     justify-content: center;
     /*Box model stuff*/
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 nav>a {
@@ -63,16 +81,14 @@ nav>a {
     /*Typography stuff*/
     font-weight: bold;
     text-decoration: none;
-    color: var(--cor1);
+    color: var(--cor0);
     /*Manipulations stuff*/
     transition-duration: 0.5s;
 }
 
 nav>a:hover {
     /*Box model stuff*/
-    background-color: var(--cor6);
-    /*Typography stuff*/
-    color: var(--cor5);
+    background-color: var(--cor5);
 }
 
 main {
@@ -81,7 +97,6 @@ main {
     min-width: 300px;
     margin: auto;
     margin-bottom: 30px;
-    padding: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: var(--cor0);
@@ -96,37 +111,21 @@ main p {
     font-size: 1em;
     text-align: justify;
     text-indent: 30px;
-    color: var(--cor6);
+    color: var(--cor7);
     /*Miscellaneous*/
     line-height: 2em;
-}
-
-main a {
-    /*Box model stuff*/
-    padding: 2px 6px;
-    background-color: var(--cor1);
-    /*Typography stuff*/
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--cor5);
-}
-
-main a:hover {
-    /*Typography stuff*/
-    text-decoration: underline;
-    color: var(--cor0);
 }
 
 section h2,
 h3 {
     /*Box model stuff*/
-    background-image: linear-gradient(to right, var(--cor1), transparent);
+    background-image: linear-gradient(to right, var(--cor5), transparent);
     /*Typography stuff*/
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
+    font-family: var(--cream-font);
+    font-size: 2.5em;
     font-weight: normal;
     text-indent: 8px;
-    color: var(--cor5);
+    color: var(--cor7);
 }
 
 #servicos {
@@ -158,17 +157,18 @@ h3 {
     /*Box model stuff*/
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: var(--cor5);
+    background-color: #3d3d3d;
     /*Typography stuff*/
+    font-weight: bold;
     text-decoration: none;
-    color: var(--cor1);
+    color: var(--cor0);
     /*Manipulations stuff*/
-    transition: background-color 0.3s ease-in-out 0.1s, opacity 0.5s linear 0.2s, transform 0.4s ease 0.3s;
+    transition-duration: 0.5s;
 }
 
 .agendar:hover {
     /*Box model stuff*/
-    background-color: var(--cor6);
+    background-color: var(--cor5);
 }
 
 .s2 {
@@ -176,6 +176,34 @@ h3 {
     padding: 20px;
     /*Typography stuff*/
     text-align: center;
+}
+
+.s2>p {
+    /*Box model stuff*/
+    border: 1px solid var(--cor5);
+    /*Typography stuff*/
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.abaixo::after {
+    /*Display stuff*/
+    content: '\00A0\2B07';
+}
+
+.celular::after {
+    /*Display stuff*/
+    content: '\00A0\1F581';
+}
+
+.s2>ul {
+    /*Typography stuff*/
+    font-weight: bold;
+    /*Miscellaneous*/
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
 }
 
 .service {
@@ -186,7 +214,9 @@ h3 {
 .service img {
     /*Box model stuff*/
     max-width: 100%;
+    border: 2px solid var(--cor5);
     border-radius: 20px;
+    /*Miscellaneous*/
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.507);
 }
 
@@ -194,15 +224,15 @@ h3 {
     /*Box model stuff*/
     margin-top: 10px;
     /*Typography stuff*/
-    font-size: 24px;
+    font-size: 2.5em;
 }
 
 footer {
     /*Box model stuff*/
     padding: 5px;
-    background-color: var(--cor5);
+    background-color: var(--cor7);
     /*Typography stuff*/
     font-size: 0.8em;
     text-align: center;
-    color: white;
+    color: var(--cor0);
 }
