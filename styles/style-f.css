@@ -60,7 +60,7 @@ html {
 /* Dark Mode */
 body.dark-mode {
     /*Box model stuff*/
-    background-image: linear-gradient(to bottom, var(--cor4), var(--cor6));
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
     /*Typography stuff*/
     color: var(--cor0);
 }
@@ -86,7 +86,7 @@ body.dark-mode {
     /*Box model stuff*/
     background-color: #1e1e1e;
     /*Miscellaneous*/
-    box-shadow: 0 0 10px var(--cor1), 0 0 20px var(--cor1), 0 0 30px var(--cor1), 0 0 40px var(--cor1), 0 0 50px var(--cor1);
+    box-shadow: 0 0 10px var(--cor6), 0 0 20px var(--cor6), 0 0 30px var(--cor6), 0 0 40px var(--cor6), 0 0 50px var(--cor6);
 }
 
 .dark-mode h1 {
@@ -217,7 +217,7 @@ nav>a:hover {
 
 main {
     /*Box model stuff*/
-    max-width: 1200px;
+    max-width: 1000px;
     min-width: 300px;
     margin: auto;
     margin-bottom: 30px;

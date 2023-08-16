@@ -217,7 +217,7 @@ nav>a:hover {
 
 main {
     /*Box model stuff*/
-    max-width: 1200px;
+    max-width: 1000px;
     min-width: 300px;
     margin: auto;
     margin-bottom: 30px;
