@@ -8,61 +8,70 @@
     <title>Studio C - Cabelereiros</title>
 </head>
 
-<body>
+<body class="content">
     <main>
         <header>
-            <h1>Studio C</h1>
+            <img src="images/studio_logo.png" alt="studio_logo">
             <nav>
-                <a href="#">Início</a>
-                <a href="#">Serviços</a>
-                <a href="#">Agendamento</a>
-                <a href="#">Contato</a>
+                <a href="index.html">Início</a>
+                <a href="#agendamento">Agendamento</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
             </nav>
         </header>
 
-        <section class="s1">
-            <h2>Seu Estilo, Nossa Paixão</h2>
+        <section>
+            <div id="agendamento">
+                <h1>Seu Estilo, Nossa Paixão</h1>
 
-            <p>Transforme seu visual no Studio C. Nossos profissionais estão prontos para criar a aparência dos seus
-                sonhos.
-            </p>
+                <p>Transforme seu visual no Studio C. Nossos profissionais estão prontos para criar a aparência dos seus
+                    sonhos.
+                </p>
 
-            <a href="#" class="agendar">Agende Agora</a>
-        </section>
+                <a href="#contato" id="agendar">Agende Agora</a>
+            </div>
 
-        <section class="s2">
+            <div id="servicos">
+                <h2>Serviços Oferecidos</h2>
 
-            <h2 id="servicos">Serviços Oferecidos</h2>
+                <p class="abaixo">Veja nossos serviços abaixo</p>
 
-            <p class="abaixo">Veja nossos serviços abaixo</p>
+                <ul>
+                    <li>Corte Masculino</li>
+                    <li>Corte Feminino</li>
+                    <li>Sobrancelhas</li>
+                    <li>Escova</li>
+                    <li>Manicure</li>
+                    <li>Pedicure</li>
+                    <li>Progressiva</li>
+                    <li>Químicas em geral</li>
+                </ul>
 
-            <ul>
-                <li>Corte Masculino</li>
-                <li>Corte Feminino</li>
-                <li>Sobrancelhas</li>
-                <li>Escova</li>
-                <li>Manicure</li>
-                <li>Pedicure</li>
-                <li>Progressiva</li>
-                <li>Químicas em geral</li>
-            </ul>
+                <p class="celular">Para mais informações entre em contato</p>
+            </div>
 
-            <p class="celular">Para mais informações entre em contato</p>
-
-            <div class="service">
-                <h3>Cortes de Cabelo</h3>
+            <div id="cortes">
+                <h2>Cortes de Cabelo</h2>
 
                 <p>Deixe nossos especialistas cuidarem do seu cabelo com cortes modernos e elegantes.</p>
 
-                <img src="images/cortes.png" alt="Corte de Cabelo">
+                <img class="img" src="images/cortes.png" alt="Corte de Cabelo">
             </div>
 
-            <div class="service">
-                <h3>Coloração</h3>
+            <div id="coloracao">
+                <h2>Coloração</h2>
 
                 <p>Realce sua beleza com nossos serviços de coloração profissional.</p>
 
-                <img src="images/coloracao.jpg" alt="Coloração de Cabelo">
+                <img class="img" src="images/coloracao.jpg" alt="Coloração de Cabelo">
+            </div>
+
+            <div id="contato">
+                <h2>Entre em contato</h2>
+
+                <p>(11) 95530-8819, Avenida Paraguassu Paulista 736, Vila Santa Teresa (Zona Leste).</p>
+
+                <img class="img" src="images/StudioC_WhatsAppQR.png" alt="QRcode">
             </div>
         </section>
     </main>

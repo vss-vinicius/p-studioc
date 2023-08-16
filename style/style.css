@@ -13,6 +13,26 @@
     font-weight: normal;
 }
 
+@keyframes fadeIn {
+    00% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     /*Variables*/
     --cor0: #FFFFFF;
@@ -45,23 +65,17 @@ body {
 header {
     /*Box model stuff*/
     min-height: 150px;
-    padding-top: 20px;
     background-color: var(--cor4);
-    background-image: linear-gradient(to bottom, #4b4949, #0c0c0c);
+    background-image: linear-gradient(to bottom, #4b4949, var(--cor7));
     /*Typography stuff*/
     text-align: center;
 }
 
-header>h1 {
+header>img {
     /*Box model stuff*/
-    margin-bottom: 10px;
-    margin-top: 10px;
-    /*Typography stuff*/
-    font-family: var(--stay-font);
-    font-size: 4em;
-    font-weight: normal;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.397);
-    color: var(--cor5);
+    width: 350px;
+    max-width: 100%;
+    height: 200px;
 }
 
 nav {
@@ -70,14 +84,14 @@ nav {
     align-items: center;
     justify-content: center;
     /*Box model stuff*/
-    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 nav>a {
     /*Box model stuff*/
     margin: 2px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 50px;
     /*Typography stuff*/
     font-weight: bold;
     text-decoration: none;
@@ -89,6 +103,8 @@ nav>a {
 nav>a:hover {
     /*Box model stuff*/
     background-color: var(--cor5);
+    /*Typography stuff*/
+    color: var(--cor7);
 }
 
 main {
@@ -116,10 +132,11 @@ main p {
     line-height: 2em;
 }
 
-section h2,
-h3 {
+h1,
+h2 {
     /*Box model stuff*/
     background-image: linear-gradient(to right, var(--cor5), transparent);
+    border-radius: 5px;
     /*Typography stuff*/
     font-family: var(--cream-font);
     font-size: 2.5em;
@@ -128,76 +145,14 @@ h3 {
     color: var(--cor7);
 }
 
-#servicos {
-    /*Box model stuff*/
-    margin-bottom: 15px;
-    padding: 2px;
-
-}
-
-.s1 {
-    /*Box model stuff*/
-    padding: 20px;
-    background-position: center;
-    background-size: cover;
-    /*Typography stuff*/
-    text-align: center;
-}
-
-.s1 h2 {
-    /*Box model stuff*/
-    margin-bottom: 20px;
-    /*Typography stuff*/
-    font-size: 36px;
-}
-
-.agendar {
-    /*Display stuff*/
-    display: inline-block;
-    /*Box model stuff*/
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #3d3d3d;
-    /*Typography stuff*/
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--cor0);
-    /*Manipulations stuff*/
-    transition-duration: 0.5s;
-}
-
-.agendar:hover {
-    /*Box model stuff*/
-    background-color: var(--cor5);
-}
-
-.s2 {
+section {
     /*Box model stuff*/
     padding: 20px;
     /*Typography stuff*/
     text-align: center;
 }
 
-.s2>p {
-    /*Box model stuff*/
-    border: 1px solid var(--cor5);
-    /*Typography stuff*/
-    font-weight: bold;
-    text-align: center;
-
-}
-
-.abaixo::after {
-    /*Display stuff*/
-    content: '\00A0\2B07';
-}
-
-.celular::after {
-    /*Display stuff*/
-    content: '\00A0\1F4F1';
-}
-
-.s2>ul {
+section ul {
     /*Typography stuff*/
     font-weight: bold;
     /*Miscellaneous*/
@@ -206,30 +161,70 @@ h3 {
     columns: 2;
 }
 
-.service {
+#agendar {
+    /*Display stuff*/
+    display: inline-block;
     /*Box model stuff*/
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: var(--cor7);
+    /*Typography stuff*/
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor0);
+    /*Manipulations stuff*/
+    transition-duration: 0.5s;
 }
 
-.service img {
+#agendar:hover {
+    /*Box model stuff*/
+    background-color: var(--cor5);
+    /*Typography stuff*/
+    color: var(--cor7);
+}
+
+.abaixo {
+    /*Box model stuff*/
+    border: 1px solid var(--cor5);
+    border-radius: 5px;
+    /*Typography stuff*/
+    font-weight: bold;
+    text-align: center;
+}
+
+.abaixo::after {
+    /*Display stuff*/
+    content: '\00A0\2B07';
+}
+
+.celular {
+    /*Box model stuff*/
+    border: 1px solid var(--cor5);
+    border-radius: 5px;
+    /*Typography stuff*/
+    font-weight: bold;
+    text-align: center;
+}
+
+.celular::after {
+    /*Display stuff*/
+    content: '\00A0\1F4F1';
+}
+
+.img {
     /*Box model stuff*/
     max-width: 100%;
+    margin-bottom: 40px;
     border: 2px solid var(--cor5);
     border-radius: 20px;
     /*Miscellaneous*/
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.507);
 }
 
-.service h3 {
-    /*Box model stuff*/
-    margin-top: 10px;
-    /*Typography stuff*/
-    font-size: 2.5em;
-}
-
 footer {
     /*Box model stuff*/
-    padding: 5px;
+    padding: 10px;
     background-color: var(--cor7);
     /*Typography stuff*/
     font-size: 0.8em;
