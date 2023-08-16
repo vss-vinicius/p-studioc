@@ -26,10 +26,12 @@
 }
 
 .content {
+    /*Manipulations stuff*/
     animation: fadeIn 0.5s ease-in-out;
 }
 
 html {
+    /*Miscellaneous*/
     scroll-behavior: smooth;
 }
 
@@ -55,6 +57,103 @@ html {
     padding: 0px;
 }
 
+/* Dark Mode */
+body.dark-mode {
+    /*Box model stuff*/
+    background-image: linear-gradient(to bottom, #333, var(--cor6));
+    /*Typography stuff*/
+    color: var(--cor0);
+}
+
+.dark-mode nav>a {
+    /*Typography stuff*/
+    color: var(--cor0);
+}
+
+.dark-mode nav>a:hover {
+    /*Box model stuff*/
+    background-color: var(--cor0);
+    /*Typography stuff*/
+    color: var(--cor7);
+}
+
+.dark-mode header {
+    /*Box model stuff*/
+    background-image: linear-gradient(to bottom, #222, var(--cor7));
+}
+
+.dark-mode main {
+    /*Box model stuff*/
+    background-color: var(--cor7);
+    /*Miscellaneous*/
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.507);
+}
+
+.dark-mode h1 {
+    /*Box model stuff*/
+    background-image: linear-gradient(to right, var(--cor6), transparent);
+    /*Typography stuff*/
+    color: var(--cor0);
+}
+
+.dark-mode h2 {
+    /*Box model stuff*/
+    background-image: linear-gradient(to right, var(--cor6), transparent);
+    /*Typography stuff*/
+    color: var(--cor0);
+}
+
+.dark-mode main p,
+.dark-mode footer {
+    /*Typography stuff*/
+    color: var(--cor0);
+}
+
+.dark-mode #agendar {
+    /*Box model stuff*/
+    background-color: var(--cor6);
+    /*Typography stuff*/
+    color: var(--cor0);
+}
+
+.dark-mode #agendar:hover {
+    /*Box model stuff*/
+    background-color: var(--cor0);
+    /*Typography stuff*/
+    color: var(--cor7);
+}
+
+.dark-mode .abaixo,
+.dark-mode .celular {
+    /*Box model stuff*/
+    border: 1px solid var(--cor6);
+    /*Typography stuff*/
+    color: var(--cor0);
+}
+
+.dark-mode .img {
+    /*Box model stuff*/
+    border: 2px solid var(--cor6);
+    /*Miscellaneous*/
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.507);
+}
+
+#dark-mode-toggle {
+    /*Positioning stuff*/
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    /*Box model stuff*/
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    /*Typography stuff*/
+    font-size: 25px;
+    /*Miscellaneous*/
+    cursor: pointer;
+}
+
 body {
     /*Box model stuff*/
     background-image: linear-gradient(to bottom, var(--cor0), var(--cor5));
@@ -63,6 +162,8 @@ body {
 }
 
 header {
+    /*Positioning stuff*/
+    position: relative;
     /*Box model stuff*/
     min-height: 150px;
     background-color: var(--cor4);
@@ -109,7 +210,7 @@ nav>a:hover {
 
 main {
     /*Box model stuff*/
-    max-width: 1000px;
+    max-width: 1200px;
     min-width: 300px;
     margin: auto;
     margin-bottom: 30px;
@@ -125,8 +226,7 @@ main p {
     margin: 15px 0px;
     /*Typography stuff*/
     font-size: 1em;
-    text-align: justify;
-    text-indent: 30px;
+    text-align: center;
     color: var(--cor7);
     /*Miscellaneous*/
     line-height: 2em;
@@ -135,8 +235,8 @@ main p {
 h1,
 h2 {
     /*Box model stuff*/
-    background-image: linear-gradient(to right, var(--cor5), transparent);
     border-radius: 5px;
+    background-image: linear-gradient(to right, var(--cor5), transparent);
     /*Typography stuff*/
     font-family: var(--cream-font);
     font-size: 2.5em;
@@ -222,7 +322,32 @@ section ul {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.507);
 }
 
+#back-to-top-button {
+    /*Positioning stuff*/
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    /*Box model stuff*/
+    padding: 0px 0px;
+    border-radius: 50px;
+    /*Typography stuff*/
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    /*Manipulations stuff*/
+    transition: background-color 0.3s, color 0.3s;
+    /*Miscellaneous*/
+    cursor: pointer;
+}
+
+#back-to-top-button:hover {
+    /*Box model stuff*/
+    background-color: var(--cor0);
+}
+
 footer {
+    /*Positioning stuff*/
+    position: relative;
     /*Box model stuff*/
     padding: 10px;
     background-color: var(--cor7);
