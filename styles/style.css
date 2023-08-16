@@ -172,11 +172,18 @@ header {
     text-align: center;
 }
 
-header>img {
+#logo {
     /*Box model stuff*/
     width: 350px;
     max-width: 100%;
     height: 200px;
+    /*Manipulations stuff*/
+    transition: transform 0.3s;
+}
+
+#logo:hover {
+    /*Manipulations stuff*/
+    transform: scale(1.05);
 }
 
 nav {
