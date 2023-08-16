@@ -318,8 +318,15 @@ section ul {
     margin-bottom: 40px;
     border: 2px solid var(--cor5);
     border-radius: 20px;
+    /*Manipulations stuff*/
+    transition: transform 0.3s;
     /*Miscellaneous*/
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.507);
+}
+
+.img:hover {
+    /*Manipulations stuff*/
+    transform: scale(1.05);
 }
 
 #back-to-top-button {
