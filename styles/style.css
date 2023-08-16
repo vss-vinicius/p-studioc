@@ -84,7 +84,7 @@ body.dark-mode {
 
 .dark-mode main {
     /*Box model stuff*/
-    background-color: var(--cor7);
+    background-color: #1e1e1e;
     /*Miscellaneous*/
     box-shadow: 0 0 10px var(--cor1), 0 0 20px var(--cor1), 0 0 30px var(--cor1), 0 0 40px var(--cor1), 0 0 50px var(--cor1);
 }
