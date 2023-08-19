@@ -57,6 +57,28 @@ html {
     padding: 0px;
 }
 
+body.feminino {
+    --cor0: #FFFFFF;
+    --cor1: #ff53f6;
+    --cor2: #D98FB6;
+    --cor3: #EFAAF0;
+    --cor4: #C38FD9;
+    --cor5: #C9A4F8;
+    --cor6: #D957B4;
+    --cor7: #000000;
+}
+
+body.masculino {
+    --cor0: #FFFFFF;
+    --cor1: #AAFC5D;
+    --cor2: #A2F059;
+    --cor3: #8CCE4D;
+    --cor4: #90D64F;
+    --cor5: #4cb903;
+    --cor6: #4C702A;
+    --cor7: #000000;
+}
+
 /* Dark Mode */
 body.dark-mode {
     /*Box model stuff*/
