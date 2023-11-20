@@ -8,7 +8,7 @@ const applyMode = (darkMode) => {
     darkModeToggle.textContent = darkMode ? "🌚" : "🌞";
 };
 
-// Recuperar o modo salvo do localStorage (agora como booleano)
+// Recuperar o modo salvo do localStorage (booleano)
 const savedDarkMode = localStorage.getItem("darkMode") === "true";
 applyMode(savedDarkMode);
 
