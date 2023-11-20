@@ -1,42 +1,51 @@
-// Seleciona o elemento com o ID "dark-mode-toggle"
 const darkModeToggle = document.getElementById("dark-mode-toggle");
-// Seleciona o elemento <body> da página
 const body = document.body;
 
-// Função para aplicar o modo claro/escuro
+// Função para aplicar o modo escuro/claro
 const applyMode = (darkMode) => {
-    if (darkMode) {
-        body.classList.add("dark-mode");
-        darkModeToggle.classList.add("dark");
-        darkModeToggle.textContent = "🌚"; // Altera o texto para "Modo Claro"
-    } else {
-        body.classList.remove("dark-mode");
-        darkModeToggle.classList.remove("dark");
-        darkModeToggle.textContent = "🌞"; // Altera o texto de volta para "Modo Escuro"
-    }
+    body.classList.toggle("dark-mode", darkMode);
+    darkModeToggle.classList.toggle("dark", darkMode);
+    darkModeToggle.textContent = darkMode ? "🌚" : "🌞";
 };
 
-// Verifica se a preferência já está salva no localStorage
-const savedDarkMode = localStorage.getItem("darkMode");
+// Recuperar o modo salvo do localStorage (agora como booleano)
+const savedDarkMode = localStorage.getItem("darkMode") === "true";
+applyMode(savedDarkMode);
 
-// Aplica o modo de acordo com a preferência salva
-applyMode(savedDarkMode === "true");
-
-// Adiciona um ouvinte de evento ao botão de alternar
+// Adicionar EventListener para alternar entre os modos
 darkModeToggle.addEventListener("click", () => {
-    // Toggles (alterna) a classe "dark-mode" no elemento <body>
     body.classList.toggle("dark-mode");
-    // Toggles (alterna) a classe "dark" no elemento darkModeToggle (botão)
     darkModeToggle.classList.toggle("dark");
 
-    // Verifica se a classe "dark-mode" está presente no <body>
-    if (body.classList.contains("dark-mode")) {
-        // Salva a preferência no localStorage como "true"
+    const isDarkMode = body.classList.contains("dark-mode");
+
+    // Armazenar o modo no localStorage como booleano
+    if (isDarkMode) {
         localStorage.setItem("darkMode", "true");
-        darkModeToggle.textContent = "🌚"; // Altera o texto para "Modo Claro"
     } else {
-        // Remove a preferência do localStorage
         localStorage.removeItem("darkMode");
-        darkModeToggle.textContent = "🌞"; // Altera o texto de volta para "Modo Escuro"
+    }
+
+    // Atualizar o texto do botão de acordo com o modo atual
+    darkModeToggle.textContent = isDarkMode ? "🌚" : "🌞";
+});
+
+// Adicionar EventListener para alternar entre os modos usando uma tecla de atalho (por exemplo, "d")
+window.addEventListener("keydown", (event) => {
+    if (event.key === "d") {
+        body.classList.toggle("dark-mode");
+        darkModeToggle.classList.toggle("dark");
+
+        const isDarkMode = body.classList.contains("dark-mode");
+
+        // Armazenar o modo no localStorage como booleano
+        if (isDarkMode) {
+            localStorage.setItem("darkMode", "true");
+        } else {
+            localStorage.removeItem("darkMode");
+        }
+
+        // Atualizar o texto do botão de acordo com o modo atual
+        darkModeToggle.textContent = isDarkMode ? "🌚" : "🌞";
     }
 });
