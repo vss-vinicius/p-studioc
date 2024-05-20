@@ -12,40 +12,20 @@ const applyMode = (darkMode) => {
 const savedDarkMode = localStorage.getItem("darkMode") === "true";
 applyMode(savedDarkMode);
 
-// Adicionar EventListener para alternar entre os modos
-darkModeToggle.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    darkModeToggle.classList.toggle("dark");
-
-    const isDarkMode = body.classList.contains("dark-mode");
-
-    // Armazenar o modo no localStorage como booleano
-    if (isDarkMode) {
-        localStorage.setItem("darkMode", "true");
-    } else {
-        localStorage.removeItem("darkMode");
-    }
-
-    // Atualizar o texto do botão de acordo com o modo atual
+// Função para alternar entre os modos e atualizar o localStorage
+const toggleMode = () => {
+    const isDarkMode = body.classList.toggle("dark-mode");
+    darkModeToggle.classList.toggle("dark", isDarkMode);
+    localStorage.setItem("darkMode", isDarkMode);
     darkModeToggle.textContent = isDarkMode ? "🌚" : "🌞";
-});
+};
+
+// Adicionar EventListener para alternar entre os modos
+darkModeToggle.addEventListener("click", toggleMode);
 
 // Adicionar EventListener para alternar entre os modos usando uma tecla de atalho (por exemplo, "d")
 window.addEventListener("keydown", (event) => {
     if (event.key === "d") {
-        body.classList.toggle("dark-mode");
-        darkModeToggle.classList.toggle("dark");
-
-        const isDarkMode = body.classList.contains("dark-mode");
-
-        // Armazenar o modo no localStorage como booleano
-        if (isDarkMode) {
-            localStorage.setItem("darkMode", "true");
-        } else {
-            localStorage.removeItem("darkMode");
-        }
-
-        // Atualizar o texto do botão de acordo com o modo atual
-        darkModeToggle.textContent = isDarkMode ? "🌚" : "🌞";
+        toggleMode();
     }
 });
